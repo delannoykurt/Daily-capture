@@ -1,0 +1,26 @@
+# Environnement virtuel
+venv/
+.env
+
+# Fichiers de cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Base de données SQLite
+*.sqlite3
+*.db
+
+# Dossiers de téléchargements temporaires
+/app/static/uploads/
+
+# Fichiers de logs
+*.log
+
+# Fichiers système (Mac, Windows, Linux)
+.DS_Store
+Thumbs.db
+
+# Déploiement
+instance/
