@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Daily Capture</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}"
+        />
+    </head>
+    <body>
+        <h1>📸 Daily Capture</h1>
+        <a href="{{ url_for('main.upload') }}">Uploader une nouvelle photo</a>
+        <hr />
+        <div>
+            {% for photo in photos %}
+            <div style="margin: 10px; display: inline-block">
+                <img
+                    src="{{ url_for('static', filename='uploads/' + photo) }}"
+                    alt="Photo"
+                    width="200"
+                />
+            </div>
+            {% else %}
+            <p>Aucune photo pour le moment.</p>
+            {% endfor %}
+        </div>
+    </body>
+</html>
